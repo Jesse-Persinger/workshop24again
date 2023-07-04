@@ -9,16 +9,17 @@ function App() {
   //console.log(puppies)
   return (
     <>
-      <div>
+      <div style={{ color: "cream", backgroundColor: "grey", padding: "50px" }}>
+        <header style={{ fontSize: "1.5em", backgroundColor: "darkslategrey", padding: "20px", width: "30em" }}>Sum Poopies!</header>
         {
           puppies.map((puppy) => {
             // console.log(featuredPup);
-            return <p onClick={() => { setFeatPupId(puppy.id) }} key={puppy.id}>{puppy.name}</p>;
+            return <p style={{ color: "cream", backgroundColor: "lightslategrey", padding: ".5em" }} onClick={() => { setFeatPupId(puppy.id) }} key={puppy.id}>{puppy.name}</p>;
           })
         }
 
         {featPupId && (
-          <div>
+          <div style={{ color: "cream", backgroundColor: "darkslategrey", padding: "3em", borderRadius: "20%" }}>
             <h2>{featuredPup.name}</h2>
             <ul>
               <li>Age: {featuredPup.age}</li>
